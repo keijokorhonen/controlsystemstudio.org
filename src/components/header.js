@@ -1,33 +1,46 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
+
+import Logo from './logo'
+import Container from './container'
+
+const Flex = styled.div`
+display: flex;
+justify-content: flex-start;
+
+@media only screen and (max-width: 468px) {
+  justify-content: space-around;
+}
+`
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `#ffffff`,
     }}
   >
+    <Container>
+    <Flex>
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        minWidth: 100,
       }}
     >
-      <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
+            minWidth: 100,
           }}
         >
-          {siteTitle}
+          <Logo />
         </Link>
-      </h1>
     </div>
+    </Flex>
+    </Container>
   </header>
 )
 
