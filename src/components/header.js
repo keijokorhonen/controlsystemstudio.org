@@ -4,6 +4,7 @@ import React from "react"
 import styled from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faGooglePlus } from "@fortawesome/free-brands-svg-icons"
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import Logo from './logo'
 import Container from './container'
@@ -59,6 +60,8 @@ flex-wrap: nowrap;
     color: #302a72;
     padding: 0.5rem 0;
   }
+
+  a
 `
 
 const Header = ({ siteTitle }) => (
