@@ -87,10 +87,42 @@ const Header = ({ siteTitle }) => (
           </Link>
         </div>
         <Menu>
-          <Link to="/about">About</Link>
-          <Link to="/features">Features</Link>
-          <Link to="/docs">Docs</Link>
-          <Link to="/contribute">Contribute</Link>
+          <Link
+            to="/about"
+            activeStyle={{
+              color: "#302a72",
+              borderBottom: `1px solid #302a72`,
+            }}
+          >
+            About
+          </Link>
+          <Link
+            to="/features"
+            activeStyle={{
+              color: "#302a72",
+              borderBottom: `1px solid #302a72`,
+            }}
+          >
+            Features
+          </Link>
+          <Link
+            to="/docs"
+            activeStyle={{
+              color: "#302a72",
+              borderBottom: `1px solid #302a72`,
+            }}
+          >
+            Docs
+          </Link>
+          <Link
+            to="/contribute"
+            activeStyle={{
+              color: "#302a72",
+              borderBottom: `1px solid #302a72`,
+            }}
+          >
+            Contribute
+          </Link>
           <a
             href="http://controlsystemstudio.org/download.html"
             target="_blank"
