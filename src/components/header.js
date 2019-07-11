@@ -73,7 +73,7 @@ const Header = ({ siteTitle }) => (
         <div
           style={{
             minWidth: 100,
-            margin: `0.5rem`
+            margin: `0.5rem`,
           }}
         >
           <Link
@@ -91,7 +91,13 @@ const Header = ({ siteTitle }) => (
           <Link to="/features">Features</Link>
           <Link to="/docs">Docs</Link>
           <Link to="/contribute">Contribute</Link>
-          <Link to="/download">Download</Link>
+          <a
+            href="http://controlsystemstudio.org/download.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download
+          </a>
           <SocialMediaLinks>
             <a
               href="https://github.com/ControlSystemStudio/cs-studio"
