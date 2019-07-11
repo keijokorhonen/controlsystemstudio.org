@@ -36,9 +36,7 @@ const Footer = () => {
       <Container>
         <Flex>
           <div>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            © {new Date().getFullYear()}, Control System Studio
           </div>
           <SocialMediaLinks>
             <a href="https://github.com/ControlSystemStudio/cs-studio" target="_blank" rel="noopener noreferrer">
