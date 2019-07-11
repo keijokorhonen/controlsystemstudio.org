@@ -60,8 +60,6 @@ flex-wrap: nowrap;
     color: #302a72;
     padding: 0.5rem 0;
   }
-
-  a
 `
 
 const Header = ({ siteTitle }) => (
