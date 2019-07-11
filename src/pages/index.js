@@ -131,6 +131,7 @@ const IndexPage = () => {
                   padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
+                  WebkitBoxDecorationBreak: `clone`,
                 }}
               >
                 Bring Your Control System to the Next Level
@@ -165,6 +166,7 @@ const IndexPage = () => {
                   padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
+                  WebkitBoxDecorationBreak: `clone`,
                 }}
               >
               EASILY INTEGRATES WITH YOUR CONTROL SYSTEM
@@ -199,6 +201,7 @@ const IndexPage = () => {
                   padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
+                  WebkitBoxDecorationBreak: `clone`,
                 }}
               >
               PRODUCTION QUALITY USER INTERFACES
@@ -232,6 +235,7 @@ const IndexPage = () => {
                   padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
+                  WebkitBoxDecorationBreak: `clone`,
                 }}
               >
               THE POWERFUL DATABROWSER
