@@ -83,7 +83,7 @@ const About = () => {
           <li>
             For the code conventions we are using, see{" "}
             <a
-              href="/ControlSystemStudio/cs-studio/wiki/CodingGuidelines"
+              href="https://github.com/ControlSystemStudio/cs-studio/wiki/CodingGuidelines"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,7 +94,7 @@ const About = () => {
           <li>
             For the Git workflow, see{" "}
             <a
-              href="/ControlSystemStudio/cs-studio/wiki/DevelopmentGuidelines"
+              href="https://github.com/ControlSystemStudio/cs-studio/wiki/DevelopmentGuidelines"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -138,7 +138,9 @@ const About = () => {
           (also visible in Eclipse in Overview/General Information/Provider) to
           record the author/maintainer in the following form:
         </p>
-        <p><code>{`Name Surname <email>[[Name Surname <email>|,]] - Site`}</code></p>
+        <p>
+          <code>{`Name Surname <email>[[Name Surname <email>|,]] - Site`}</code>
+        </p>
         <p>
           For example:{" "}
           <code>{`Gabriele Carcassi <carcassi@bnl.gov>, Kunal Shroff <kshroff@bnl.gov> - Brookhaven National Lab`}</code>
