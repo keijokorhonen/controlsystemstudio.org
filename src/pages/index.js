@@ -87,28 +87,28 @@ const IndexPage = () => {
       ) {
         childImageSharp {
           fluid(maxWidth: 4877, maxHeight: 1280) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       pvmg: file(relativePath: { eq: "pvManagerGraphene.png" }) {
         childImageSharp {
           fluid(maxWidth: 437) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       boy: file(relativePath: { eq: "boy-controlroom.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 437) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       databrowser: file(relativePath: { eq: "dataBrowser.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 655) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

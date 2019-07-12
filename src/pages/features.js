@@ -12,14 +12,14 @@ const About = () => {
       beast: file(relativePath: { eq: "beast.png" }) {
         childImageSharp {
           fluid(maxWidth: 487) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       databrowser: file(relativePath: { eq: "databrowserabout.png" }) {
         childImageSharp {
           fluid(maxWidth: 487) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

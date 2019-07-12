@@ -16,35 +16,35 @@ const Collaboration = () => {
       ess: file(relativePath: { eq: "ESS_logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       brok: file(relativePath: { eq: "Brok_Logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       desy: file(relativePath: { eq: "desy_Logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       frib: file(relativePath: { eq: "FRIB_logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       iter: file(relativePath: { eq: "iter_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -53,7 +53,7 @@ const Collaboration = () => {
       ) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
