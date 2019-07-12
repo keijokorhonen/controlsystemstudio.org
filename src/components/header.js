@@ -27,7 +27,7 @@ const MenuToggle = styled.button`
   color: #000000;
   background-color: #ffffff;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 1rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   transition: color 250ms ease-in;
@@ -79,9 +79,15 @@ const SocialMediaLinks = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   a {
-    margin-left: 5px;
     color: #302a72;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  @media only screen and (min-width: 768px) {
+    a {
+      font-size: 14px;
+      padding: 0.5rem 0;
+      margin-left: 5px;
+    }
   }
 `
 
@@ -165,14 +171,14 @@ const Header = ({ siteTitle }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faGithub} size="lg" />
+                <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
               <a
                 href="https://plus.google.com/u/0/b/101349549663920375487/101349549663920375487/posts"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faGooglePlus} size="lg" />
+                <FontAwesomeIcon icon={faGooglePlus} size="2x" />
               </a>
             </SocialMediaLinks>
           </Menu>
