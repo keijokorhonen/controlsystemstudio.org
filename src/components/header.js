@@ -114,8 +114,11 @@ const Header = ({ siteTitle }) => {
                 color: `white`,
                 textDecoration: `none`,
               }}
+              aria-label="Home"
             >
-              <Logo />
+              <Logo 
+                alt="Control System Studio Logo"
+              />
             </Link>
           </div>
           <Menu visible={menuVisible}>
@@ -170,6 +173,7 @@ const Header = ({ siteTitle }) => {
                 href="https://github.com/ControlSystemStudio/cs-studio"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Link to Github repository"
               >
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
@@ -177,6 +181,7 @@ const Header = ({ siteTitle }) => {
                 href="https://plus.google.com/u/0/b/101349549663920375487/101349549663920375487/posts"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Link to Google Plus community"
               >
                 <FontAwesomeIcon icon={faGooglePlus} size="2x" />
               </a>
