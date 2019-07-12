@@ -66,52 +66,72 @@ const Collaboration = () => {
         href="https://europeanspallationsource.se/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Link to ESS Website"
       >
         <Img
           fluid={images.ess.childImageSharp.fluid}
           style={{ minWidth: 99 }}
+          alt="ESS Logo"
         />
       </a>
       <a
         href="http://www.bnl.gov/world/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Link to BNL Website"
       >
         <Img
           fluid={images.brok.childImageSharp.fluid}
           style={{ minWidth: 99 }}
+          alt="BNL Logo"
         />
       </a>
-      <a href="http://www.desy.de/" target="_blank" rel="noopener noreferrer">
+      <a
+        href="http://www.desy.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to DESY Website"
+      >
         <Img
           fluid={images.desy.childImageSharp.fluid}
           style={{ minWidth: 99 }}
+          alt="DESY Logo"
         />
       </a>
       <a
         href="http://www.frib.msu.edu/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Link to FRIB Website"
       >
         <Img
           fluid={images.frib.childImageSharp.fluid}
           style={{ minWidth: 99 }}
-        />
-      </a>
-      <a href="http://www.iter.org/" target="_blank" rel="noopener noreferrer">
-        <Img
-          fluid={images.iter.childImageSharp.fluid}
-          style={{ minWidth: 99 }}
+          alt="FRIB Logo"
         />
       </a>
       <a
-        href="http://controlsystemstudio.org/cs-studio/img/collaboration/SNS.png"
+        href="http://www.iter.org/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Link to ITER Website"
+      >
+        <Img
+          fluid={images.iter.childImageSharp.fluid}
+          style={{ minWidth: 99 }}
+          alt="ITER Logo"
+        />
+      </a>
+      <a
+        href="https://neutrons.ornl.gov/sns"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to SNS Website"
       >
         <Img
           fluid={images.sns.childImageSharp.fluid}
           style={{ minWidth: 99 }}
+          alt="SNS Logo"
         />
       </a>
     </Flex>
