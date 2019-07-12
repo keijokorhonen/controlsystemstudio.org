@@ -15,7 +15,7 @@ const Flex = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media only screen and (max-width: 468px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -57,17 +57,14 @@ const Menu = styled.nav`
   & > a:hover {
     color: #302a72;
   }
-
-  @media only screen and (max-width: 468px) {
+  
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     & > a {
       padding: 1rem;
     }
-  }
-
-  @media only screen and (max-width: 768px) {
     a {
       display: ${props => props.visible ? '' : 'none'};
     }
