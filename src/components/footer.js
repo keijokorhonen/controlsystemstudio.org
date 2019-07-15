@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Container from "./container"
 
 const StyledFooter = styled.div`
-  background-color: #302a72;
+  background-color: #00293f;
   color: #b7b7b7;
 
   a {

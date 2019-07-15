@@ -1,12 +1,29 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
+import Banner from "../components/banner"
 
 const About = () => {
+  const images = useStaticQuery(graphql`
+    query {
+      banner: file(
+        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_5_darker.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 3300, maxHeight: 400, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <SEO title="Contribute" />
+      <Banner imageFluid={images.banner.childImageSharp.fluid} text="Contribute" />
       <Container>
         <h1>How to Contribute to CS-Studio</h1>
         <ul>

@@ -49,13 +49,12 @@ const Menu = styled.nav`
     text-decoration: none;
     color: #000000;
     padding: 0.5rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin: auto 0.5rem;
     transition: color 250ms ease-in;
   }
 
   & > a:hover {
-    color: #302a72;
+    color: #00293f;
   }
   
   @media only screen and (max-width: 768px) {
@@ -76,14 +75,14 @@ const SocialMediaLinks = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   a {
-    color: #302a72;
+    color: #00293f;
     padding: 0.5rem;
   }
   @media only screen and (min-width: 768px) {
     a {
       font-size: 14px;
       padding: 0.5rem 0;
-      margin-left: 5px;
+      margin: auto 0 auto 5px;
     }
   }
 `
@@ -113,9 +112,7 @@ const Header = ({ siteTitle }) => {
               }}
               aria-label="Home"
             >
-              <Logo 
-                alt="Control System Studio Logo"
-              />
+              <Logo />
             </Link>
           </div>
           <Menu visible={menuVisible}>
@@ -125,8 +122,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/about"
               activeStyle={{
-                color: "#302a72",
-                borderBottom: `1px solid #302a72`,
+                color: "#00293f",
+                borderBottom: `1px solid #00293f`,
               }}
             >
               About
@@ -134,8 +131,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/features"
               activeStyle={{
-                color: "#302a72",
-                borderBottom: `1px solid #302a72`,
+                color: "#00293f",
+                borderBottom: `1px solid #00293f`,
               }}
             >
               Features
@@ -143,8 +140,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/docs"
               activeStyle={{
-                color: "#302a72",
-                borderBottom: `1px solid #302a72`,
+                color: "#00293f",
+                borderBottom: `1px solid #00293f`,
               }}
             >
               Docs
@@ -152,8 +149,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/contribute"
               activeStyle={{
-                color: "#302a72",
-                borderBottom: `1px solid #302a72`,
+                color: "#00293f",
+                borderBottom: `1px solid #00293f`,
               }}
             >
               Contribute

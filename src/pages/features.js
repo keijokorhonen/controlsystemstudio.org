@@ -5,10 +5,20 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
+import Banner from "../components/banner"
 
 const About = () => {
   const images = useStaticQuery(graphql`
     query {
+      banner: file(
+        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_4_darker.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 3300, maxHeight: 400, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
       beast: file(relativePath: { eq: "beast.png" }) {
         childImageSharp {
           fluid(maxWidth: 487) {
@@ -29,8 +39,8 @@ const About = () => {
   return (
     <Layout>
       <SEO title="Features" />
+      <Banner imageFluid={images.banner.childImageSharp.fluid} text="Features" />
       <Container>
-        <h1>Features</h1>
         <h2>BEAST - The Best Ever Alarm System Toolkit</h2>
         <p>
           This is the distributed alarm system developed at the SNS, consisting

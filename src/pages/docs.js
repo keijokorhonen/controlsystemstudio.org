@@ -1,23 +1,20 @@
 import React from "react"
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBell, faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faBullhorn, faLightbulb, faThumbsUp, faSyncAlt } from '@fortawesome/free-solid-svg-icons'
-
+import { faGraduationCap, faBullhorn, faLightbulb, faThumbsUp, faSyncAlt } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
+import Banner from "../components/banner"
 
 const Grid = styled.div`
 display: grid;
 grid-template-columns: 100%;
 
 @media only screen and (min-width: 468px) {
-    grid-template-columns: 50% 50%;
-}
-
-@media only screen and (min-width: 992px) {
     grid-template-columns: 50% 50%;
 }
 
@@ -35,20 +32,47 @@ text-decoration: none;
 color: #000000;
 transition: box-shadow 100ms ease-in;
 
+p:last-child {
+  margin-bottom: 0;
+}
 
 &:hover {
-    color: #302a72;
+    color: #00293f;
     box-shadow: 0 0 3px 1px #0c0c0c;
 }
 `
 
 const About = () => {
+  const images = useStaticQuery(graphql`
+    query {
+      banner: file(
+        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_6_darker.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 3300, maxHeight: 400, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <SEO title="Docs" />
+      <Banner imageFluid={images.banner.childImageSharp.fluid} text="Docs" />
       <Container>
-        <h1>Docs</h1>
         <Grid>
+          <Showcase
+            href="http://cs-studio.sourceforge.net/docbook/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGraduationCap} size="2x" />
+            <h3>Guidebook</h3>
+            <p>
+            Manual for building and using CS-Studio
+            </p>
+          </Showcase>
           <Showcase
             href="https://drive.google.com/drive/folders/0B_ikNAN_jxjPR05WbFFuRmliMnc?tid=0Bxrrhhn0aTLWNS0teDEtNzRkVnc"
             target="_blank"
@@ -57,8 +81,7 @@ const About = () => {
             <FontAwesomeIcon icon={faBell} size="2x" />
             <h3>Management Review Meetings</h3>
             <p>
-              Management holds a yearly meeting to reevaluate the collaboration
-              and policy and objectives.
+              Reports from the yearly meetings for collaboration, policy and objectives
             </p>
           </Showcase>
           <Showcase
@@ -69,7 +92,7 @@ const About = () => {
             <FontAwesomeIcon icon={faBullhorn} size="2x" />
             <h3>Meeting Minutes</h3>
             <p>
-              There is a monthly meeting at the first Wednesday of the month.
+              Minutes from the monthly meetings
             </p>
           </Showcase>
           <Showcase
@@ -106,7 +129,7 @@ const About = () => {
           >
             <FontAwesomeIcon icon={faEnvelope} size="2x" />
             <h3>Notices</h3>
-            <p>Notices are emailed to the core email list.</p>
+            <p>Notices are emailed to the core email list</p>
           </Showcase>
         </Grid>
         <h2>Policy</h2>

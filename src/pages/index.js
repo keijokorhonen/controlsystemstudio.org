@@ -2,15 +2,15 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
-import Collaboration from '../components/collaboration'
+import Collaboration from "../components/collaboration"
+import Banner from "../components/banner"
 
 const Highlight = styled.span`
-  color: #302a72;
+  color: #00293f;
   font-weight: bold;
 `
 
@@ -23,19 +23,17 @@ const WhiteBackground = styled.div`
 `
 
 const DownloadButton = styled.a`
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-decoration: none;
-  background-color: #302a72;
+  background-color: #00293f;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   padding: 15px 20px;
   margin: 0 0 auto;
   transition: background-color 100ms ease-in;
 
   &:hover {
-    background-color: #46417f;
+    background-color: #12435e;
   }
 `
 
@@ -83,10 +81,10 @@ const IndexPage = () => {
   const images = useStaticQuery(graphql`
     query {
       banner: file(
-        relativePath: { eq: "iso_new_england_control_room_large_jpg.jpg" }
+        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_1_darker_v02.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 4877, maxHeight: 1280) {
+          fluid(maxWidth: 3300, maxHeight: 400, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -117,29 +115,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div style={{ width: `100%` }}>
-        <BackgroundImage
-          fluid={images.banner.childImageSharp.fluid}
-          style={{ height: 350, display: `flex`, justifyContent: `center` }}
-        >
-          <Container>
-            <h1>
-              <span
-                style={{
-                  backgroundColor: `#302a72`,
-                  color: `#ffffff`,
-                  padding: `0.5rem 0.5rem`,
-                  lineHeight: `1.6`,
-                  boxDecorationBreak: `clone`,
-                  WebkitBoxDecorationBreak: `clone`,
-                }}
-              >
-                Bring Your Control System to the Next Level
-              </span>
-            </h1>
-          </Container>
-        </BackgroundImage>
-      </div>
+      <Banner imageFluid={images.banner.childImageSharp.fluid} text="BRING YOUR CONTROL SYSTEM TO THE NEXT LEVEL" />
       <div>
         <Container>
           <div style={{ display: `flex`, justifyContent: `space-between` }}>
@@ -156,14 +132,11 @@ const IndexPage = () => {
             universities.
           </p>
         </Container>
-        <GreyBackground style={{ padding: `2rem 0`, marginBottom: `2rem` }}>
+        <GreyBackground style={{ padding: `2rem 0` }}>
           <Container>
             <h2>
               <span
                 style={{
-                  backgroundColor: `#302a72`,
-                  color: `#ffffff`,
-                  padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
                   WebkitBoxDecorationBreak: `clone`,
@@ -191,14 +164,11 @@ const IndexPage = () => {
             </ContentFlexLeft>
           </Container>
         </GreyBackground>
-        <WhiteBackground style={{ padding: `2rem 0`, marginBottom: `2rem` }}>
+        <WhiteBackground style={{ padding: `2rem 0` }}>
           <Container>
             <h2>
             <span
                 style={{
-                  backgroundColor: `#302a72`,
-                  color: `#ffffff`,
-                  padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
                   WebkitBoxDecorationBreak: `clone`,
@@ -230,9 +200,6 @@ const IndexPage = () => {
             <h2>
             <span
                 style={{
-                  backgroundColor: `#302a72`,
-                  color: `#ffffff`,
-                  padding: `0.5rem 0.5rem`,
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
                   WebkitBoxDecorationBreak: `clone`,
