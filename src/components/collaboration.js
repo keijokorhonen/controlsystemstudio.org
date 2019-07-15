@@ -15,35 +15,35 @@ const Collaboration = () => {
     query {
       ess: file(relativePath: { eq: "ESS_logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       brok: file(relativePath: { eq: "Brok_Logo_v01.png" }) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       desy: file(relativePath: { eq: "desy_Logo_v01.png" }) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       frib: file(relativePath: { eq: "FRIB_logo_v01.png" }) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       iter: file(relativePath: { eq: "iter_v01.png" }) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -52,7 +52,7 @@ const Collaboration = () => {
         relativePath: { eq: "Spallation_Neutron_Source_logo_v01.png" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 99, maxHeight: 99) {
+          fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

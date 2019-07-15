@@ -24,7 +24,7 @@ const WhiteBackground = styled.div`
 
 const DownloadButton = styled.a`
   text-decoration: none;
-  background-color: #00293f;
+  background-color: #004160;
   color: #ffffff;
   font-size: 22px;
   cursor: pointer;
@@ -33,7 +33,8 @@ const DownloadButton = styled.a`
   transition: background-color 100ms ease-in;
 
   &:hover {
-    background-color: #12435e;
+    color: #ffffff;
+    background-color: #1a5c7a;
   }
 `
 
@@ -81,7 +82,7 @@ const IndexPage = () => {
   const images = useStaticQuery(graphql`
     query {
       banner: file(
-        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_1_darker_v02.png" }
+        relativePath: { eq: "banners/CS-Studio-Keyvisual_banner_1_darker_v03.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 3300, maxHeight: 400, quality: 100) {
@@ -89,16 +90,16 @@ const IndexPage = () => {
           }
         }
       }
-      pvmg: file(relativePath: { eq: "pvManagerGraphene.png" }) {
+      pvmg: file(relativePath: { eq: "Layer-Architecture-IOC-hosting-v20-5.png" }) {
         childImageSharp {
-          fluid(maxWidth: 437) {
+          fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      boy: file(relativePath: { eq: "boy-controlroom.jpg" }) {
+      ui: file(relativePath: { eq: "01-main_System-Overview_v02.png" }) {
         childImageSharp {
-          fluid(maxWidth: 437) {
+          fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -115,7 +116,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Banner imageFluid={images.banner.childImageSharp.fluid} text="BRING YOUR CONTROL SYSTEM TO THE NEXT LEVEL" />
+      <Banner
+        imageFluid={images.banner.childImageSharp.fluid}
+        text="BRING YOUR CONTROL SYSTEM TO THE NEXT LEVEL"
+      />
       <div>
         <Container>
           <div style={{ display: `flex`, justifyContent: `space-between` }}>
@@ -142,7 +146,7 @@ const IndexPage = () => {
                   WebkitBoxDecorationBreak: `clone`,
                 }}
               >
-              EASILY INTEGRATES WITH YOUR CONTROL SYSTEM
+                EASILY INTEGRATES WITH YOUR CONTROL SYSTEM
               </span>
             </h2>
             <ContentFlexLeft>
@@ -157,31 +161,35 @@ const IndexPage = () => {
                 cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum.
               </p>
-              <Img
-                fluid={images.pvmg.childImageSharp.fluid}
-                style={{ maxWidth: 437, width: `100%` }}
-              />
+              <div>
+                <Img
+                  fluid={images.pvmg.childImageSharp.fluid}
+                  style={{ maxWidth: 437, width: `100%` }}
+                />
+              </div>
             </ContentFlexLeft>
           </Container>
         </GreyBackground>
         <WhiteBackground style={{ padding: `2rem 0` }}>
           <Container>
             <h2>
-            <span
+              <span
                 style={{
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
                   WebkitBoxDecorationBreak: `clone`,
                 }}
               >
-              PRODUCTION QUALITY USER INTERFACES
+                PRODUCTION QUALITY USER INTERFACES
               </span>
             </h2>
             <ContentFlexRight>
-              <Img
-                fluid={images.boy.childImageSharp.fluid}
-                style={{ maxWidth: 437, width: `100%` }}
-              />
+              <div>
+                <Img
+                  fluid={images.ui.childImageSharp.fluid}
+                  style={{ maxWidth: 437, width: `100%` }}
+                />
+              </div>
               <p>
                 With a focus on control room screens and viewing on the fly
                 correlations. Sed ut perspiciatis unde omnis iste natus error
@@ -198,14 +206,14 @@ const IndexPage = () => {
         <GreyBackground style={{ padding: `2rem 0`, marginBottom: `2rem` }}>
           <Container>
             <h2>
-            <span
+              <span
                 style={{
                   lineHeight: `1.6`,
                   boxDecorationBreak: `clone`,
                   WebkitBoxDecorationBreak: `clone`,
                 }}
               >
-              THE POWERFUL DATABROWSER
+                THE POWERFUL DATABROWSER
               </span>
             </h2>
             <ContentFlexLeft>
@@ -217,10 +225,12 @@ const IndexPage = () => {
                 ad minima veniam, quis nostrum exercitationem ullam corporis
                 suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
               </p>
-              <Img
-                fluid={images.databrowser.childImageSharp.fluid}
-                style={{ maxWidth: 655, width: `100%` }}
-              />
+              <div>
+                <Img
+                  fluid={images.databrowser.childImageSharp.fluid}
+                  style={{ maxWidth: 655, width: `100%` }}
+                />
+              </div>
             </ContentFlexLeft>
           </Container>
         </GreyBackground>

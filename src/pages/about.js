@@ -35,7 +35,9 @@ const About = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <div style={{ marginTop: `3rem`, marginBottom: `3rem` }}>
         <Collaboration />
+        </div>
       </Container>
     </Layout>
   )

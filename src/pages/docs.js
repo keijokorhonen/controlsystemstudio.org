@@ -16,17 +16,31 @@ grid-template-columns: 100%;
 
 @media only screen and (min-width: 468px) {
     grid-template-columns: 50% 50%;
+    & a:nth-chlid(2n+1) {
+      margin-right: 1rem;
+    }
+    &:nth-chlid(even) {
+      margin-left: 1rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     grid-template-columns: 33.3% 33.3% 33.3%;
+    & a:nth-chlid(3n) {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    &:nth-chlid(3n+2) {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
 }
 `
 
 const Showcase = styled.a`
 text-align: center;
 padding: 1rem;
-margin: 1rem;
+margin: 1rem 0;
 background-color: #f5f5f5;
 text-decoration: none;
 color: #000000;

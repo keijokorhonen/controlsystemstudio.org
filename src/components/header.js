@@ -75,7 +75,7 @@ const SocialMediaLinks = styled.div`
   justify-content: flex-start;
   flex-wrap: nowrap;
   a {
-    color: #00293f;
+    color: #004160;
     padding: 0.5rem;
   }
   @media only screen and (min-width: 768px) {
@@ -101,7 +101,7 @@ const Header = ({ siteTitle }) => {
           <div
             style={{
               minWidth: 100,
-              margin: `0.5rem`,
+              margin: `0.5rem 0`,
             }}
           >
             <Link
@@ -122,8 +122,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/about"
               activeStyle={{
-                color: "#00293f",
-                borderBottom: `1px solid #00293f`,
+                color: "#004160",
+                borderBottom: `2px solid #004160`,
               }}
             >
               About
@@ -131,8 +131,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/features"
               activeStyle={{
-                color: "#00293f",
-                borderBottom: `1px solid #00293f`,
+                color: "#004160",
+                borderBottom: `2px solid #004160`,
               }}
             >
               Features
@@ -140,8 +140,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/docs"
               activeStyle={{
-                color: "#00293f",
-                borderBottom: `1px solid #00293f`,
+                color: "#004160",
+                borderBottom: `2px solid #004160`,
               }}
             >
               Docs
@@ -149,8 +149,8 @@ const Header = ({ siteTitle }) => {
             <Link
               to="/contribute"
               activeStyle={{
-                color: "#00293f",
-                borderBottom: `1px solid #00293f`,
+                color: "#004160",
+                borderBottom: `2px solid #004160`,
               }}
             >
               Contribute
