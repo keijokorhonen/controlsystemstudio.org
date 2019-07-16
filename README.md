@@ -7,7 +7,8 @@ https://lucid-clarke-a55e88.netlify.com/
 
 ## Developing/Testing locally
 Gatsby has a fantastic development server feature, which allows you to preview the page immediately without building it. Make sure to install all npm dependencies using `npm install` the first time you run the site.
-  $ gatsby develop
+    
+    $ gatsby develop
   
 ## Building
 To run the site on a server, it needs to be built first.
