@@ -8,7 +8,11 @@ margin: auto;
 padding: 1.45rem 1.0875rem;
 
 @media only screen and (min-width: 468px) {
-    width: 570px;
+    width: 468px;
+}
+
+@media only screen and (min-width: 768px) {
+    width: 560px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -20,8 +24,8 @@ padding: 1.45rem 1.0875rem;
 }
 `
 
-const Container = ({ children }) => (
-    <StyledContainer>
+const Container = ({ children, style }) => (
+    <StyledContainer style={style} >
         {children}
     </StyledContainer>
 )

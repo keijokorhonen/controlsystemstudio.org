@@ -45,7 +45,7 @@ const ContentFlex = styled.div`
   & > * {
     flex: 1;
   }
-  @media (max-width: 468px) {
+  @media (max-width: 992px) {
     flex-direction: column;
     & > p {
       margin-right: 0px;
@@ -59,7 +59,7 @@ const ContentFlexLeft = styled(ContentFlex)`
     margin-right: 3rem;
   }
 
-  @media (max-width: 468px) {
+  @media (max-width: 992px) {
     & > p {
       margin-right: 0px;
       margin-bottom: 1rem;
@@ -71,11 +71,17 @@ const ContentFlexRight = styled(ContentFlex)`
     margin-left: 3rem;
   }
 
-  @media (max-width: 468px) {
+  @media (max-width: 992px) {
     & > p {
       margin-left: 0px;
       margin-top: 1rem;
     }
+`
+
+const ContentImage = styled.div`
+  @media (max-width: 992px) {
+    display: contents;
+  }
 `
 
 const IndexPage = () => {
@@ -121,14 +127,14 @@ const IndexPage = () => {
         text="BRING YOUR CONTROL SYSTEM TO THE NEXT LEVEL"
       />
       <div>
-        <Container>
+        <Container style={{ marginTop: `2rem`, marginBottom: `2rem` }}>
           <div style={{ display: `flex`, justifyContent: `space-between` }}>
             <h1>Control System Studio</h1>
             <DownloadButton href="http://controlsystemstudio.org/download.html">
               Download
             </DownloadButton>
           </div>
-          <p>
+          <p style={{ marginBottom: `0` }}>
             <Highlight>Control System Studio</Highlight> is an Eclipse-based
             collection of tools to monitor and operate large scale control
             systems, such as the ones in the accelerator community. It's a
@@ -161,12 +167,12 @@ const IndexPage = () => {
                 cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum.
               </p>
-              <div>
+              <ContentImage>
                 <Img
                   fluid={images.pvmg.childImageSharp.fluid}
                   style={{ maxWidth: 437, width: `100%` }}
                 />
-              </div>
+              </ContentImage>
             </ContentFlexLeft>
           </Container>
         </GreyBackground>
@@ -184,12 +190,12 @@ const IndexPage = () => {
               </span>
             </h2>
             <ContentFlexRight>
-              <div>
+              <ContentImage>
                 <Img
                   fluid={images.ui.childImageSharp.fluid}
                   style={{ maxWidth: 437, width: `100%` }}
                 />
-              </div>
+              </ContentImage>
               <p>
                 With a focus on control room screens and viewing on the fly
                 correlations. Sed ut perspiciatis unde omnis iste natus error
@@ -225,12 +231,12 @@ const IndexPage = () => {
                 ad minima veniam, quis nostrum exercitationem ullam corporis
                 suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
               </p>
-              <div>
+              <ContentImage>
                 <Img
                   fluid={images.databrowser.childImageSharp.fluid}
                   style={{ maxWidth: 655, width: `100%` }}
                 />
-              </div>
+              </ContentImage>
             </ContentFlexLeft>
           </Container>
         </GreyBackground>

@@ -11,47 +11,55 @@ import Container from "../components/container"
 import Banner from "../components/banner"
 
 const Grid = styled.div`
-display: grid;
-grid-template-columns: 100%;
+  display: grid;
+  grid-template-columns: 100%;
 
-@media only screen and (min-width: 468px) {
+  @media only screen and (min-width: 468px) {
     grid-template-columns: 50% 50%;
-    & a:nth-chlid(2n+1) {
-      margin-right: 1rem;
+    a:nth-child(2n + 1) {
+      margin-right: 0.6rem;
     }
-    &:nth-chlid(even) {
-      margin-left: 1rem;
-    }
-}
 
-@media only screen and (min-width: 1200px) {
+    a:nth-child(2n) {
+      margin-left: 0.6rem;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
     grid-template-columns: 33.3% 33.3% 33.3%;
-    & a:nth-chlid(3n) {
+
+    a:nth-child(3n + 1) {
       margin-left: 0;
-      margin-right: 1rem;
+      margin-right: 0.8rem;
     }
-    &:nth-chlid(3n+2) {
+
+    a:nth-child(3n + 2) {
+      margin-right: 0.4rem;
+      margin-left: 0.4rem;
+    }
+
+    a:nth-child(3n) {
+      margin-left: 0.8rem;
       margin-right: 0;
-      margin-left: 1rem;
     }
-}
+  }
 `
 
 const Showcase = styled.a`
 text-align: center;
 padding: 1rem;
-margin: 1rem 0;
+margin: 0.6rem 0;
 background-color: #f5f5f5;
 text-decoration: none;
-color: #000000;
-transition: box-shadow 100ms ease-in;
+color: #00293f;
+transition: 100ms ease-in;
 
 p:last-child {
   margin-bottom: 0;
 }
 
 &:hover {
-    color: #00293f;
+    color: #004160;
     box-shadow: 0 0 3px 1px #0c0c0c;
 }
 `
@@ -75,7 +83,7 @@ const About = () => {
       <SEO title="Docs" />
       <Banner imageFluid={images.banner.childImageSharp.fluid} text="Docs" />
       <Container>
-        <Grid>
+        <Grid className="docsgrid" style={{ marginBottom: `2rem` }} >
           <Showcase
             href="http://cs-studio.sourceforge.net/docbook/"
             target="_blank"
