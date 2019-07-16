@@ -13,35 +13,35 @@ const Flex = styled.div`
 const Collaboration = () => {
   const images = useStaticQuery(graphql`
     query {
-      ess: file(relativePath: { eq: "ESS_logo.png" }) {
+      ess: file(relativePath: { eq: "institutes/ESS_logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      brok: file(relativePath: { eq: "Brok_Logo_v01.png" }) {
+      brok: file(relativePath: { eq: "institutes/Brok_Logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      desy: file(relativePath: { eq: "desy_Logo_v01.png" }) {
+      desy: file(relativePath: { eq: "institutes/desy_Logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      frib: file(relativePath: { eq: "FRIB_logo_v01.png" }) {
+      frib: file(relativePath: { eq: "institutes/FRIB_logo_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      iter: file(relativePath: { eq: "iter_v01.png" }) {
+      iter: file(relativePath: { eq: "institutes/iter_v01.png" }) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -49,7 +49,7 @@ const Collaboration = () => {
         }
       }
       sns: file(
-        relativePath: { eq: "Spallation_Neutron_Source_logo_v01.png" }
+        relativePath: { eq: "institutes/Spallation_Neutron_Source_logo_v01.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 99, maxHeight: 99, quality: 80) {
