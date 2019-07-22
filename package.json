@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "controlsystemstudio.org",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Control System Studio Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Keijo Korhonen <kkorhonen@telia.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
@@ -35,7 +35,12 @@
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "controlsystemstudio",
+    "epics",
+    "control",
+    "system",
+    "studio",
+    "css"
   ],
   "license": "MIT",
   "scripts": {
@@ -48,9 +53,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ControlSystemStudio/controlsystemstudio.github.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ControlSystemStudio/controlsystemstudio.github.com/issues"
   }
 }

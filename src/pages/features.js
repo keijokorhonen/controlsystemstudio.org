@@ -53,7 +53,7 @@ const About = () => {
         text="Features"
       />
       <Container style={{ marginTop: `2rem` }} >
-        <h2>DisplayBuilder</h2>
+        <h2>Display Builder</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

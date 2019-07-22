@@ -155,13 +155,15 @@ const Header = ({ siteTitle }) => {
             >
               Contribute
             </Link>
-            <a
-              href="http://controlsystemstudio.org/download.html"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/download"
+              activeStyle={{
+                color: "#004160",
+                borderBottom: `2px solid #004160`,
+              }}
             >
               Download
-            </a>
+            </Link>
             <SocialMediaLinks>
               <a
                 href="https://github.com/ControlSystemStudio/cs-studio"

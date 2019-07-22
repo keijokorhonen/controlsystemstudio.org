@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Control System Studio`,
     description: `Control System Studio is an Eclipse-based collection of tools to monitor and operate large scale control systems, such as the ones in the accelerator community.`,
-    author: `@gatsbyjs`,
+    author: ``,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

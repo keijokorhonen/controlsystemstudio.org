@@ -22,22 +22,6 @@ const WhiteBackground = styled.div`
   background-color: #ffffff;
 `
 
-const DownloadButton = styled.a`
-  text-decoration: none;
-  background-color: #004160;
-  color: #ffffff;
-  font-size: 22px;
-  cursor: pointer;
-  padding: 15px 20px;
-  margin: 0 0 auto;
-  transition: background-color 100ms ease-in;
-
-  &:hover {
-    color: #ffffff;
-    background-color: #1a5c7a;
-  }
-`
-
 const ContentFlex = styled.div`
   display: flex;
   justify-content: space-between;
@@ -128,12 +112,7 @@ const IndexPage = () => {
       />
       <div>
         <Container style={{ marginTop: `2rem`, marginBottom: `2rem` }}>
-          <div style={{ display: `flex`, justifyContent: `space-between` }}>
-            <h1>Control System Studio</h1>
-            <DownloadButton href="http://controlsystemstudio.org/download.html">
-              Download
-            </DownloadButton>
-          </div>
+          <h1>Control System Studio</h1>
           <p style={{ marginBottom: `0` }}>
             <Highlight>Control System Studio</Highlight> is an Eclipse-based
             collection of tools to monitor and operate large scale control
