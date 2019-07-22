@@ -36,7 +36,24 @@ const About = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <div style={{ marginTop: `3rem`, marginBottom: `3rem` }}>
-        <Collaboration />
+          <h2>Contact</h2>
+          <p>
+            User Level Questions:{" "}
+            <a
+              href="http://www.aps.anl.gov/epics/tech-talk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >EPICS Tech-Talk Mailing list</a>
+          </p>
+          <p>Developer Level Questions: <a
+              href="mailto:cs-studio-core@lists.sourceforge.net"
+            >cs-studio-core@lists.sourceforge.net</a></p>
+          <p>Report Bugs/Problems: <a
+              href="https://github.com/ControlSystemStudio/cs-studio/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub Issue Tracker</a></p>
+          <Collaboration style={{ marginTop: `3rem` }}/>
         </div>
       </Container>
     </Layout>

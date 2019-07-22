@@ -10,7 +10,7 @@ const Flex = styled.div`
   flex-wrap: wrap;
 `
 
-const Collaboration = () => {
+const Collaboration = ({ style }) => {
   const images = useStaticQuery(graphql`
     query {
       ess: file(relativePath: { eq: "institutes/ESS_logo.png" }) {
@@ -61,7 +61,7 @@ const Collaboration = () => {
   `)
 
   return (
-    <Flex>
+    <Flex style={style}>
       <a
         href="https://europeanspallationsource.se/"
         target="_blank"

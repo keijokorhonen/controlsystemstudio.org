@@ -10,6 +10,8 @@ import SEO from "../components/seo"
 import Container from "../components/container"
 import Banner from "../components/banner"
 
+import { dlInfo } from "../components/downloadinfo"
+
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,12 +19,45 @@ const Flex = styled.div`
   align-items: center;
 
   @media only screen and (min-width: 992px) {
-      flex-direction: row;
-      justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
   }
 `
 
-const DownloadButton = styled.a`
+const OSButtons = styled.div`
+  margin: 0 0 1rem;
+  button {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem 1rem;
+  }
+
+  .osLinux {
+    color: ${props =>
+      props.OSName === "Linux" || props.OSName === "Other"
+        ? "#004160"
+        : "#000000"};
+    border-bottom: ${props =>
+      props.OSName === "Linux" || props.OSName === "Other"
+        ? "2px solid #004160"
+        : "none"};
+  }
+
+  .osMac {
+    color: ${props => (props.OSName === "Mac" ? "#004160" : "#000000")};
+    border-bottom: ${props =>
+      props.OSName === "Mac" ? "2px solid #004160" : "none"};
+  }
+
+  .osWindows {
+    color: ${props => (props.OSName === "Windows" ? "#004160" : "#000000")};
+    border-bottom: ${props =>
+      props.OSName === "Windows" ? "2px solid #004160" : "none"};
+  }
+`
+
+const StyledDownloadButton = styled.a`
   text-decoration: none;
   background-color: #004160;
   color: #ffffff;
@@ -42,11 +77,10 @@ const DownloadButton = styled.a`
   }
 `
 
-const DownloadButtonDev = styled(DownloadButton)`
-background-color: #ffffff;
-color: #004160;
-border: 2px solid #004160;
-
+const StyledDownloadButtonDev = styled(StyledDownloadButton)`
+  background-color: #ffffff;
+  color: #004160;
+  border: 2px solid #004160;
 
   &:hover {
     color: #ffffff;
@@ -60,49 +94,33 @@ const DownloadSubtext = styled.p`
   padding: 0.835rem 0.935rem;
 `
 
-const OSButtons = styled.div`
-margin: 0 0 1rem;
-button {
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin: 0 1rem 1rem;
-}
+const DownloadButton = ({ link, os }) => (
+  <div>
+    <StyledDownloadButton href={link}>
+      <FontAwesomeIcon icon={faDownload} /> Download Control System Studio
+    </StyledDownloadButton>
+    <DownloadSubtext>
+      Version {dlInfo.downloadVersion} for {os} |{" "}
+      <a href={dlInfo.allDownloads}>Other Versions</a>
+    </DownloadSubtext>
+  </div>
+)
 
-.osLinux {
-    color: ${props => props.OSName === "Linux" ? "#004160" : "#000000"};
-    border-bottom: ${props => props.OSName === "Linux" ? "2px solid #004160" : "none"};
-}
-
-.osMac {
-    color: ${props => props.OSName === "Mac" ? "#004160" : "#000000"};
-    border-bottom: ${props => props.OSName === "Mac" ? "2px solid #004160" : "none"};
-}
-
-.osWindows {
-    color: ${props => props.OSName === "Windows" ? "#004160" : "#000000"};
-    border-bottom: ${props => props.OSName === "Windows" ? "2px solid #004160" : "none"};
-}
-`
+const DevDownloadButton = () => (
+  <div>
+    <StyledDownloadButtonDev href={dlInfo.downloadDev}>
+      <FontAwesomeIcon icon={faDownload} /> Download Development Build
+    </StyledDownloadButtonDev>
+    <DownloadSubtext>Version {dlInfo.downloadDevVersion}</DownloadSubtext>
+  </div>
+)
 
 const Download = () => {
   const [OSName, setOSName] = useState("Other")
-  
-  useEffect(() => {
-      setOSName(detectOS())
-  }, [])
 
-  const downloadVersion = "4.5.9"
-  const downloadStableLinux =
-    "http://download.controlsystemstudio.org/release/4.5/cs-studio-4.5.9-linux.gtk.x86_64.tar.gz"
-  const downloadStableWindows =
-    "http://download.controlsystemstudio.org/release/4.5/cs-studio-4.5.9-win32.win32.x86_64.zip"
-  const downloadStableMac =
-    "http://download.controlsystemstudio.org/release/4.5/cs-studio-4.5.9-macosx.cocoa.x86_64.zip"
-  const allDownloads = "http://download.controlsystemstudio.org/release/4.5/"
-  const downloadDevVersion = "4.6.0"
-  const downloadDev =
-    "https://openepics.ci.cloudbees.com/view/CS-Studio%204.6/"
+  useEffect(() => {
+    setOSName(detectOS())
+  }, [])
 
   const images = useStaticQuery(graphql`
     query {
@@ -129,85 +147,86 @@ const Download = () => {
         <Flex>
           <OSButtons OSName={OSName}>
             <button onClick={() => setOSName("Linux")} className="osLinux">
-             <FontAwesomeIcon icon={faLinux} /> Linux
+              <FontAwesomeIcon icon={faLinux} /> Linux
             </button>
             <button onClick={() => setOSName("Mac")} className="osMac">
-            <FontAwesomeIcon icon={faApple} /> Mac
+              <FontAwesomeIcon icon={faApple} /> Mac
             </button>
             <button onClick={() => setOSName("Windows")} className="osWindows">
-            <FontAwesomeIcon icon={faWindows} /> Windows
+              <FontAwesomeIcon icon={faWindows} /> Windows
             </button>
           </OSButtons>
         </Flex>
         <Flex>
           {(OSName === "Linux" || OSName === "Other") && (
-            <div>
-              <DownloadButton href={downloadStableLinux}>
-                <FontAwesomeIcon icon={faDownload} /> Download Control System
-                Studio
-              </DownloadButton>
-              <DownloadSubtext>
-                Version {downloadVersion} for Linux |{" "}
-                <a href={allDownloads}>Other Versions</a>
-              </DownloadSubtext>
-            </div>
+            <DownloadButton link={dlInfo.downloadStableLinux} os={"Linux"} />
           )}
 
           {OSName === "Mac" && (
-            <div>
-              <DownloadButton href={downloadStableMac}>
-                <FontAwesomeIcon icon={faDownload} /> Download Control System
-                Studio
-              </DownloadButton>
-              <DownloadSubtext>
-                Version {downloadVersion} for Mac |{" "}
-                <a href={allDownloads}>Other Versions</a>
-              </DownloadSubtext>
-            </div>
+            <DownloadButton link={dlInfo.downloadStableMac} os={"Mac"} />
           )}
 
           {OSName === "Windows" && (
-            <div>
-              <DownloadButton href={downloadStableWindows}>
-                <FontAwesomeIcon icon={faDownload} /> Download Control System
-                Studio
-              </DownloadButton>
-              <DownloadSubtext>
-                Version {downloadVersion} for Windows |{" "}
-                <a href={allDownloads}>Other Versions</a>
-              </DownloadSubtext>
-            </div>
+            <DownloadButton
+              link={dlInfo.downloadStableWindows}
+              os={"Windows"}
+            />
           )}
-          <div>
-            <DownloadButtonDev href={downloadDev}>
-              <FontAwesomeIcon icon={faDownload} /> Download Development Build
-            </DownloadButtonDev>
-            <DownloadSubtext>Version {downloadDevVersion}</DownloadSubtext>
-          </div>
+          <DevDownloadButton />
         </Flex>
         <h2>Site Specific Versions</h2>
         <ul>
           <li>
-            <a href="http://css.desy.de/content/e413/index_eng.html">DESY</a>
+            <a
+              href="http://css.desy.de/content/e413/index_eng.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DESY
+            </a>
           </li>
           <li>
-            <a href="https://confluence.esss.lu.se/display/CR/ESS+CS-Studio+Releases">
+            <a
+              href="https://confluence.esss.lu.se/display/CR/ESS+CS-Studio+Releases"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               ESS
             </a>
           </li>
           <li>
-            <a href="http://www-linac.kek.jp/cont/css/">KEK</a>
+            <a
+              href="http://www-linac.kek.jp/cont/css/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              KEK
+            </a>
           </li>
           <li>
-            <a href="http://cs-studio.sourceforge.net/nsls2/nsls2.html">
+            <a
+              href="http://cs-studio.sourceforge.net/nsls2/nsls2.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               NSLSII
             </a>
           </li>
           <li>
-            <a href="https://controlssoftware.sns.ornl.gov/">SNS</a>
+            <a
+              href="https://controlssoftware.sns.ornl.gov/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SNS
+            </a>
           </li>
           <li>
-            <a href="https://sourceforge.net/projects/cs-studio/files/raon-release/">
+            <a
+              href="https://sourceforge.net/projects/cs-studio/files/raon-release/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               RAON
             </a>
           </li>
