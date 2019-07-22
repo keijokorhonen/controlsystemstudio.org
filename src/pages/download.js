@@ -65,11 +65,13 @@ const StyledDownloadButton = styled.a`
   cursor: pointer;
   padding: 0.835rem 0.935rem;
   margin: 0 auto;
-  transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in, border 100ms ease-in;
+  border: 2px solid #004160;
 
   &:hover {
     color: #ffffff;
     background-color: #1a5c7a;
+    border: 2px solid #1a5c7a;
   }
 
   @media only screen and (max-width: 468px) {
@@ -80,11 +82,11 @@ const StyledDownloadButton = styled.a`
 const StyledDownloadButtonDev = styled(StyledDownloadButton)`
   background-color: #ffffff;
   color: #004160;
-  border: 2px solid #004160;
 
   &:hover {
     color: #ffffff;
     background-color: #004160;
+    border: 2px solid #004160;
   }
 `
 
