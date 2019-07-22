@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import Container from "../components/container"
 import Banner from "../components/banner"
 
-import { dlInfo } from "../components/downloadinfo"
+import { dlInfo } from "../utils/downloadinfo"
 
 const Flex = styled.div`
   display: flex;

@@ -17,3 +17,6 @@ To run the site on a server, it needs to be built first.
     $ npm run build
   
 The website files can be found in `public`.
+
+## Downloads
+Because links to downloads can be updated quite frequently, they are separated from the Download page to make editing them a little easier. You can find the file where you can define each link necessary in `src/utils/downloadinfo.js`.
