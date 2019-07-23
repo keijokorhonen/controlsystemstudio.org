@@ -33,6 +33,10 @@ const OSButtons = styled.div`
     margin: 0 1rem 1rem;
   }
 
+  button:hover {
+    color: #00293f;
+  }
+
   .osLinux {
     color: ${props =>
       props.OSName === "Linux" || props.OSName === "Other"

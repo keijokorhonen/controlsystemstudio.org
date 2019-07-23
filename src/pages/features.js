@@ -52,7 +52,7 @@ const About = () => {
         imageFluid={images.banner.childImageSharp.fluid}
         text="Features"
       />
-      <Container style={{ marginTop: `2rem` }} >
+      <Container style={{ marginTop: `2rem` }}>
         <h2>Display Builder</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -78,8 +78,10 @@ const About = () => {
             dicta sunt explicabo.
           </li>
         </ul>
-        <Img fluid={images.opi.childImageSharp.fluid} 
-          style={{ maxWidth: `80%`, margin: `3rem 0 4rem` }}/>
+        <Img
+          fluid={images.opi.childImageSharp.fluid}
+          style={{ maxWidth: `80%`, margin: `3rem 0 4rem` }}
+        />
         <div style={{ marginBottom: `3rem` }}></div>
         <h2>BEAST - The Best Ever Alarm System Toolkit</h2>
         <p>
@@ -120,9 +122,11 @@ const About = () => {
             http://icalepcs2009.spring8.or.jp/abstract/pdf/TUA001_TALK.PDF
           </a>
         </p>
-        <a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BEAST">
-          Read more
-        </a>
+        <p>
+          <a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BEAST">
+            Read more
+          </a>
+        </p>
         <div style={{ marginBottom: `3rem` }}></div>
         <h2>BOY - Best OPI, Yet</h2>
         <p>
@@ -156,9 +160,9 @@ const About = () => {
           integrated in any Eclipse RCP application. It has been tested that BOY
           runs well on Windows, Unix and X OS platforms.
         </p>
-        <a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BOY">
+        <p><a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BOY">
           Read more
-        </a>
+        </a></p>
         <div style={{ marginBottom: `3rem` }}></div>
         <h2>DataBrowser</h2>
         <p>
@@ -195,9 +199,9 @@ const About = () => {
           the sample surface. As another example, an outer loop may vary the
           sample temperature while inner loops vary the sample position.
         </p>
-        <a href="http://htmlpreview.github.io/?https://github.com/ControlSystemStudio/cs-studio/blob/master/applications/scan/scan-plugins/org.csstudio.scan.ui/doc/scansystem.html">
+        <p><a href="http://htmlpreview.github.io/?https://github.com/ControlSystemStudio/cs-studio/blob/master/applications/scan/scan-plugins/org.csstudio.scan.ui/doc/scansystem.html">
           Read more
-        </a>
+        </a></p>
       </Container>
     </Layout>
   )

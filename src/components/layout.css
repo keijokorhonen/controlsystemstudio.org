@@ -50,6 +50,9 @@ a:hover {
   outline-width: 0;
   color: #00293f;
 }
+p > a, li > a {
+  font-weight: 600;
+}
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -231,7 +234,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-weight: 400;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;

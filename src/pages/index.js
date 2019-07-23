@@ -105,7 +105,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="" />
       <Banner
         imageFluid={images.banner.childImageSharp.fluid}
         text="BRING YOUR CONTROL SYSTEM TO THE NEXT LEVEL"
@@ -114,7 +114,7 @@ const IndexPage = () => {
         <Container style={{ marginTop: `2rem`, marginBottom: `2rem` }}>
           <h1>Control System Studio</h1>
           <p style={{ marginBottom: `0` }}>
-            <Highlight>Control System Studio</Highlight> is an Eclipse-based
+            <Highlight>Control System Studio</Highlight> or <Highlight>CS-Studio</Highlight> is an Eclipse-based
             collection of tools to monitor and operate large scale control
             systems, such as the ones in the accelerator community. It's a
             product of the collaboration between different laboratories and
