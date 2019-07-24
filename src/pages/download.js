@@ -9,6 +9,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Container from "../components/container"
 import Banner from "../components/banner"
+import SiteSpecificVersions from "../components/SiteSpecificVersions"
 
 import { dlInfo } from "../utils/downloadinfo"
 
@@ -181,62 +182,8 @@ const Download = () => {
           <DevDownloadButton />
         </Flex>
         <h2>Site Specific Versions</h2>
-        <ul>
-          <li>
-            <a
-              href="http://css.desy.de/content/e413/index_eng.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              DESY
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://confluence.esss.lu.se/display/CR/ESS+CS-Studio+Releases"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ESS
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://www-linac.kek.jp/cont/css/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              KEK
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://cs-studio.sourceforge.net/nsls2/nsls2.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NSLSII
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://controlssoftware.sns.ornl.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              SNS
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://sourceforge.net/projects/cs-studio/files/raon-release/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RAON
-            </a>
-          </li>
-        </ul>
+        <SiteSpecificVersions />
+        <div style={{ marginBottom: `1rem` }}></div>
       </Container>
     </Layout>
   )
