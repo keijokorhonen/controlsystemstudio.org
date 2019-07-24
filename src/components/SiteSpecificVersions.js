@@ -35,7 +35,7 @@ const SiteSpecificVersions = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-            CSS DESY KYRO <FontAwesomeIcon icon={faExternalLinkAlt} />
+            CSS DESY KRYO <FontAwesomeIcon icon={faExternalLinkAlt} />
         </StyledDownloadButton>
       </Site>
       <Site>
