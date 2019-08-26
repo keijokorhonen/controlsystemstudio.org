@@ -55,29 +55,72 @@ const About = () => {
       <Container style={{ marginTop: `2rem` }}>
         <h2>Display Builder</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          The Display Builder is an operator interface panel builder for
+          CS-Studio. Driven by changes in computer graphics technology and
+          trends, EPICS operator interface tools tend to undergo fundamental
+          transformations every 10 years, recently accelerating.
         </p>
+        <p>
+          The Display Builder aims to minimize these transitions. It is in large
+          parts backwards compatible with the original CS-Studio{" "}
+          <code>BOY</code> tool. There are translation tools from EDM and MEDM.
+        </p>
+        <p>Key features include:</p>
         <ul>
           <li>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            Heavy use of threading. Display files are loaded in background
+            threads, related displays are loaded in parallel, plot images are
+            prepared in separate threads, scripts are executed off the user
+            interface thread.
           </li>
           <li>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+            Large number of single-purpose widgets. For example, an{" "}
+            <code>Ellipse</code>
+            for static graphics, an <code>LED</code> that changes between on/off
+            states based on a PV, and a <code>Multi State LED</code> that
+            changes between more than two PV states. Widgets with specific
+            purpose are more obvious not only to the end user but also to tools
+            which translate between display file formats.
           </li>
           <li>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            The PV layer supports EPICS Channel Access, PV Access, local PVs,
+            simulated PVs, but also other protocols like MQTT. The data flow is
+            controlled using the Reactive Extensions for Java.
           </li>
           <li>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            Model, Representation, Runtime and Editor are strictly separate
+            modules, allowing each to evolve separately.
+          </li>
+          <li>
+            The Representation is based on JavaFX, the most modern Java GUI
+            library, but as mentioned the representation is fundamentally
+            separate from the model and runtime. In principle, we could replace
+            the graphics library, and a proof-of-concept had indeed been
+            implemented based on SWT.
           </li>
         </ul>
+        <p>The Display Builder file format is "compact XML" similar to this:</p>
+        <pre>
+          <code>
+            {`<widget type="label">
+  <x>100</x>
+  <y>200</y>
+  <text>Hello</text>
+<widget>`}
+          </code>
+        </pre>
+
+        <p>
+          Such an XML format can be read and written by many tools, simplifying
+          the programmatic generation of displays. The minimal nature without
+          any direct references to the display builder will simplify future
+          moves to the next greatest EPICS display tool.
+        </p>
+        <p>
+          The Display Builder is available for both the original Eclipse-based
+          CS-Studio and the current Phoebus-based development. In addition, a
+          purely web based runtime is available for remotely viewing displays.
+        </p>
         <Img
           fluid={images.opi.childImageSharp.fluid}
           style={{ maxWidth: `80%`, margin: `3rem 0 4rem` }}
@@ -160,9 +203,11 @@ const About = () => {
           integrated in any Eclipse RCP application. It has been tested that BOY
           runs well on Windows, Unix and X OS platforms.
         </p>
-        <p><a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BOY">
-          Read more
-        </a></p>
+        <p>
+          <a href="https://github.com/ControlSystemStudio/cs-studio/wiki/BOY">
+            Read more
+          </a>
+        </p>
         <div style={{ marginBottom: `3rem` }}></div>
         <h2>DataBrowser</h2>
         <p>
@@ -199,9 +244,11 @@ const About = () => {
           the sample surface. As another example, an outer loop may vary the
           sample temperature while inner loops vary the sample position.
         </p>
-        <p><a href="http://htmlpreview.github.io/?https://github.com/ControlSystemStudio/cs-studio/blob/master/applications/scan/scan-plugins/org.csstudio.scan.ui/doc/scansystem.html">
-          Read more
-        </a></p>
+        <p>
+          <a href="http://htmlpreview.github.io/?https://github.com/ControlSystemStudio/cs-studio/blob/master/applications/scan/scan-plugins/org.csstudio.scan.ui/doc/scansystem.html">
+            Read more
+          </a>
+        </p>
       </Container>
     </Layout>
   )
